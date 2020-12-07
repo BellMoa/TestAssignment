@@ -62,3 +62,13 @@ Scenario('Check login form when using empty login and password. ', ({ I }) => {
     I.waitForText('The password field is empty.');
     I.saveScreenshot('LoginWithEmptyUserAndEmptyPassword.png');
 });
+
+Scenario('Check login form when using empty login and existing password. ', ({ I }) => {
+
+    I.fillField('//*[@id="user_login"]','');
+    I.fillField('//*[@id="user_pass"]','Mae9iGei6m');
+    I.checkOption('//*[@id="rememberme"]');
+    I.click('//*[@id="wp-submit"]');
+    I.waitForText('The username field is empty.')
+    I.saveScreenshot('LoginWithEmptyUserAndExistingPassword.png');
+});
