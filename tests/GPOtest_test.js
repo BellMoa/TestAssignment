@@ -25,4 +25,10 @@ Data(accounts).Scenario('Test By GPO model and Data Set',({ I , current ,loginFo
 
     loginFormPage.loginAtForm(current.userLogin,current.userPassword);
 
+    if(I.amOnPage('http://genjo.ml/wp-login.php'))
+    {
+        I.waitForElement('//*[@id="wp-submit"]');
+    }
+
+
 });
