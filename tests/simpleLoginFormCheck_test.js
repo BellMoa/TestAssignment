@@ -23,3 +23,13 @@ Scenario('Checking the login form when using the second existing user', ({ I }) 
     I.saveScreenshot('secondUserSuccess.png');
     I.waitForClickable('#site-footer > div > a');
 });
+
+Scenario('Checking the login form when a non-existent user is used', ({ I }) => {
+    I.fillField('//*[@id="user_login"]','elvin');
+    I.fillField('//*[@id="user_pass"]','13247');
+    I.checkOption('//*[@id="rememberme"]');
+    I.click('//*[@id="wp-submit"]');
+    I.waitForText('Unknown username.');
+    I.saveScreenshot('LoginWithNonExistentUser.png');
+});
+
