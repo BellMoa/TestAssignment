@@ -33,3 +33,12 @@ Scenario('Checking the login form when a non-existent user is used', ({ I }) => 
     I.saveScreenshot('LoginWithNonExistentUser.png');
 });
 
+Scenario('Checking the login form when using an existing user and incorrect password.', ({ I }) => {
+    I.fillField('//*[@id="user_login"]','testuser1');
+    I.fillField('//*[@id="user_pass"]','Teechaep8a');
+    I.checkOption('//*[@id="rememberme"]');
+    I.click('//*[@id="wp-submit"]');
+    I.waitForText('Lost your password?');
+    I.saveScreenshot('LoginWithExistentUserAndIncorrectPassword.png');
+
+});
