@@ -3,8 +3,11 @@ exports.config = {
   output: './output',
   helpers: {
     WebDriver: {
-      url: 'genjo.ml',
-      browser: 'chrome'
+      url: 'http://genjo.ml/',
+      browser: 'chrome',
+      port: 4444,
+      restart: false,
+      windowSize: '1920x1680'
     }
   },
   include: {
