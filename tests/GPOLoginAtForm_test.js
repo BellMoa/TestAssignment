@@ -1,5 +1,9 @@
 Feature('login');
 
-Scenario('test something', ({ I }) => {
+Before(({ I }) => {
+    I.amOnPage('login-page');
+});
 
+Scenario('test something', ({ I }) => {
+    I.wait(1);
 });
