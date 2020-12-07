@@ -19,7 +19,7 @@ module.exports = {
     I.fillField(this.locators.passwordField,password);
     I.checkOption(this.checkBox);
     I.click(this.button);
-    I.wait(1);
+    I.wait(1)
   }
 
 }
