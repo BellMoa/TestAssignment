@@ -25,5 +25,6 @@ Before(({ I }) => {
 
 Data(accounts).Scenario('Test By GPO model and Data Set',({ I , current ,loginFormPage }) => {
 
+    loginFormPage.loginAtForm(current.userLogin,current.userPassword);
 
 });
