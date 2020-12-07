@@ -17,8 +17,6 @@ Before(({ I }) => {
     //Add default page
     I.amOnPage('login-page');
     
-    
-
 });
 
 //Scenario that Use createde Data Set and GPO model(codeceptJS)
